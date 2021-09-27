@@ -29,11 +29,6 @@ const AddWordCard = (props) => {
     descRef.current.value = '';
     exRef.current.value = '';
     history.goBack();
-
-    // 1. 클릭하면 미들웨어에서 액션 생성함수(firestore에 저장) > redux에서 액션 생성함수 > 액션 > reducer > 뷰
-    // 2. home화면으로 이동
-    // 3. 추가 된 단어 보이게
-    // 4. 스크롤은 자동으로 계속해서 하단으로 이동.
   };
 
   return (

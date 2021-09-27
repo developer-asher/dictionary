@@ -11,13 +11,13 @@ import { loadWordFB } from './redux/modules/word';
 
 function App() {
   const dispatch = useDispatch();
-  let is_loading = useSelector((state) => state.word.isLoading);
+  let isLoading = useSelector((state) => state.word.is_loading);
 
   useEffect(() => {
     dispatch(loadWordFB());
   }, [dispatch]);
 
-  if (is_loading) {
+  if (isLoading) {
     return <Spinner />;
   }
 

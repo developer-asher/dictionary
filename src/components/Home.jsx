@@ -16,9 +16,6 @@ const Home = (props) => {
     history.push('/card');
   };
 
-  // 처음 로드되면 firestore에 있는 데이터 보여주기
-  // 미들웨어 로드 액션생성함수 > 액션생성함수 > 액션 > reducer > 뷰
-
   return (
     <>
       <WordWrap>
