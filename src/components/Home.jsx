@@ -12,7 +12,6 @@ const Home = (props) => {
   let wordList = useSelector((state) => state.word.list);
 
   const goAddWord = () => {
-    console.log('단어추가');
     history.push('/card');
   };
 

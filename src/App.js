@@ -17,6 +17,14 @@ function App() {
     dispatch(loadWordFB());
   }, [dispatch]);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: window.outerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+
   if (isLoading) {
     return <Spinner />;
   }
