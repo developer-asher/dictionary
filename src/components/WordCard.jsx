@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const WordCard = ({ wordInfo }) => {
@@ -21,6 +20,7 @@ const WordCard = ({ wordInfo }) => {
 };
 
 const Card = styled.section`
+  position: relative;
   width: 49%;
   height: 320px;
   max-height: 320px;
