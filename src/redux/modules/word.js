@@ -45,6 +45,7 @@ export const loadWordFB = () => {
 
 export const createWordFB = (word_obj) => {
   return async function (dispatch) {
+    dispatch(isLoading(true));
     const docRef = await addDoc(collection(db, 'word'), word_obj);
     const word_list = { id: docRef.id, ...word_obj };
 
@@ -58,12 +59,12 @@ export default function reducer(state = initialState, action = {}) {
       return { ...state, is_loading: action.loading };
 
     case 'word/LOAD':
-      return { ...state.is_loading, list: action.word_list };
+      return { list: action.word_list, is_loading: false };
 
     case 'word/CREATE':
       const word_list = [...state.list, action.word_list];
 
-      return { ...state, list: word_list };
+      return { ...state, list: word_list, is_loading: false };
 
     default:
       return state;
